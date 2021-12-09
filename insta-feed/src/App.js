@@ -1,6 +1,7 @@
 // ./App.js
 import Post from './components/Post';
 import Header from './components/Header';
+import InfiniteScrollLoop from './components/Loop';
 import { Component } from 'react/cjs/react.production.min';
 
 import christmas from "./post1.jpg"
@@ -102,7 +103,11 @@ class App extends Component {
         <Header />
 
         <div>
-          {posts}
+
+          <InfiniteScrollLoop outerStyle={{ border: "1px solid black"}}>
+            {posts}
+          </InfiniteScrollLoop>
+
         </div>
 
       </div>
